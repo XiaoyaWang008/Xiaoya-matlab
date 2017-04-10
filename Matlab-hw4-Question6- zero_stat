@@ -1,0 +1,12 @@
+% Write a function called zero_stat that takes a matrix as an input that only has 0 and 1 elements. 
+% The function needs to compute and return the percentage of 0 elements in the matrix. 
+% Do not use the if and for statement. 
+% For example, if there are 10 zeros and 15 ones in a 5-by-5 matrix that is provided as an input to zero_stat, 
+% it would return 40 because 40% of the elements are zero.
+
+function P = zero_stat(M)
+[m, n] = size(M);
+a = sum(M);
+b = sum(a);
+P = (1 - b./m./n) * 100%%
+fprintf ('The percentage of 0s in this matrix is %d %%', P)
