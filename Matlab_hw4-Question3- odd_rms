@@ -1,0 +1,15 @@
+% Write a function called odd_rmsthat returns orms, 
+% which is the square root of the mean of the squares of the first nnpositive odd integers,
+% where nnis a positive integer and is the only input argument. 
+% For example, if nnis 3, your function needs to compute and 
+% return the square root of the average of the numbers 1, 9, and 25. 
+% You may use built-in functions including, for example, sumand sqrt, 
+% except for the built-in function rms, which is not allowed.
+
+function orms = odd_rms(nn)
+f = (1: 2 : 2*nn);
+a = f.^2;
+[m n] = size(f);
+b = sum(a)./n;
+orms = sqrt(b);
+end
