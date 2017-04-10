@@ -1,0 +1,20 @@
+% Write a function called peri_sum that computes the sum of the elements of an input matrix A that are on the “perimeter” of A. 
+% In other words, it adds together the elements that are in the first and last rows and columns. 
+% Note that the smallest dimension of A is at least 2, but you do not need to check this. 
+% Hint: do not double count any elements!
+
+function M = peri_sum(A)
+v1 = A (1: end, 1);
+v2 = A (1, 2: end);
+v3 = A (2 : end, end);
+v4 = A (end, 2: end - 1);
+n1 = v1(:);
+n2 = v2(:);
+n3 = v3(:);
+n4 = v4(:);
+M1 = sum(n1);
+M2 = sum(n2);
+M3 = sum(n3);
+M4 = sum(n4);
+M = M1 + M2 + M3 + M4;
+end
